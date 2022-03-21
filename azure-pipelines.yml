@@ -31,16 +31,10 @@ stages:
     backendAzureRmStorageAccountName: 'terraopsa'
     backendAzureRmContainerName: 'tfstate'
     backendAzureRmKey: 'terraops.tfstate'
-
-  task: TerraformTaskV2@2
-  inputs:
     provider: 'azurerm'
     command: 'plan'
     commandOptions: '-out=tfplan'
-    environmentServiceNameAzureRM: 'Visual Studio Enterprise Subscription – MPN(c6887f08-d52a-4ffc-a0ca-623e182be993)'
-
-  task: TerraformTaskV2@2
-  inputs:
+    environmentServiceNameAzureRM: 'Visual Studio Enterprise Subscription – MPN(c6887f08-d52a-4ffc-a0ca-623e182be993)
     provider: 'azurerm'
     command: 'apply'
     commandOptions: 'tfplan'
