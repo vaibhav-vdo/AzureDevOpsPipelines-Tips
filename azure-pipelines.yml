@@ -20,7 +20,7 @@ variables:
 stages:
   task: TerraformInstaller@0
   inputs:
-    terraformVersion: ' 0.14'
+    terraformVersion: '0.14'
 
   task: TerraformTaskV2@2
   inputs:
